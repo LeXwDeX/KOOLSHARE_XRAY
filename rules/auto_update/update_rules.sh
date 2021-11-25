@@ -1,4 +1,14 @@
 #!/bin/bash
+
+# backupfile
+wget -4 -O- https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList.txt >./getfile/WhiteList.txt
+wget -4 -O- https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipip_country/ipip_country_cn.netset >./getfile/ipip_country_cn.netset
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf >./getfile/accelerated-domains.china.conf
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf  >./getfile/apple.china.conf
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf >./getfile/google.china.conf
+wget -4 -O- http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest >./getfile/delegated-apnic-latest
+wget -4 -O- https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList.txt >./getfile/WhiteList.txt
+
 CurrentDate=$(date +%Y-%m-%d)
 # ======================================
 # get gfwlist for shadowsocks ipset mode
