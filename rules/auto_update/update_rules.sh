@@ -9,6 +9,10 @@ wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/mas
 wget -4 -O- http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest >./getfile/delegated-apnic-latest
 wget -4 -O- https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList.txt >./getfile/WhiteList.txt
 
+tag=$(wget -qO- -t1 -T2 "https://api.github.com/repos/Loyalsoldier/v2ray-rules-dat/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
+wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geoip.dat" >./getfile/geoip.dat
+wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geosite.dat" >./getfile/geosite.dat 
+
 CurrentDate=$(date +%Y-%m-%d)
 # ======================================
 # get gfwlist for shadowsocks ipset mode
