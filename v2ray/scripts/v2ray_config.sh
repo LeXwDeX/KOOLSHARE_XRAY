@@ -853,18 +853,20 @@ detect_ss(){
 		echo_date v2ray符合启动条件！~
 	fi
 }
+
 get_latest_release() {
-#   curl --silent "https://api.github.com/repos/$1/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
-	curl --silent "https://api.github.com/repos/v2fly/v2ray-core/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
+	wget -qO- -t1 -T2 "https://api.github.com/repos/$1/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'
+	wget -qO- -t1 -T2 "https://api.github.com/repos/v2fly/v2ray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'
 }
+
 check_update_v2ray(){
 	local lastver oldver
 	echo_date 开始检查 v2ray 最新版本。。。
-	# if [ "$v2ray_basic_check_releases" == "0" ]; then
-	# 	lastver=$(wget --no-check-certificate --timeout=8 --tries=2 -qO- "https://github.com/v2fly/v2ray-core/tags"| grep "/v2fly/v2ray-core/releases/tag/"| head -n 1| awk -F "/tag/" '{print $2}'| sed 's/\">//') 
-	# else
-	# 	lastver=$(get_latest_release "v2ray/v2ray-core")
-	# fi
+	if [ "$v2ray_basic_check_releases" == "0" ]; then
+		lastver=$(wget -qO- -t1 -T2 "https://api.github.com/repos/v2fly/v2ray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
+	else
+		lastver=$(get_latest_release "v2ray/v2ray-core")
+	fi
 	lastver=$(get_latest_release)
 	oldver="v$(v2ray -version|cut -d" " -f 2|sed -n 1p)"
 	if [ -n "$lastver" ]; then 
@@ -909,8 +911,9 @@ check_update_v2ray(){
 }
 #=====================
 update_rule(){
-	url_back="https://koolshare.ngrok.wang/maintain_files"
-	url_main="https://raw.githubusercontent.com/hq450/fancyss/master/rules/"
+	url_back="https://raw.githubusercontent.com/hq450/fancyss/master/rules/"
+	url_main="https://raw.githubusercontent.com/HEXtoDEC/LEDE_V2Ray/main/rules/"
+	
 	# version dectet
 	version_gfwlist1=$(cat $KSROOT/v2ray/version | sed -n 1p | sed 's/ /\n/g'| sed -n 1p)
 	version_chnroute1=$(cat $KSROOT/v2ray/version | sed -n 2p | sed 's/ /\n/g'| sed -n 1p)
