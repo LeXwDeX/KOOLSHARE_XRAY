@@ -1,17 +1,20 @@
 #!/bin/bash
 
 # backupfile
-wget -4 https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList.txt >./getfile/WhiteList.txt
-wget -4 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipip_country/ipip_country_cn.netset >./getfile/ipip_country_cn.netset
-wget -4 https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf >./getfile/accelerated-domains.china.conf
-wget -4 https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf  >./getfile/apple.china.conf
-wget -4 https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf >./getfile/google.china.conf
-wget -4 http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest >./getfile/delegated-apnic-latest
-wget -4 https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList.txt >./getfile/WhiteList.txt
+wget -4 -O- https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList.txt >./getfile/WhiteList.txt
+wget -4 -O- https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipip_country/ipip_country_cn.netset >./getfile/ipip_country_cn.netset
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf >./getfile/accelerated-domains.china.conf
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf  >./getfile/apple.china.conf
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf >./getfile/google.china.conf
+wget -4 -O- http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest >./getfile/delegated-apnic-latest
+wget -4 -O- https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList.txt >./getfile/WhiteList.txt
 
-tag=$(wget -qO- -t1 -T2 "https://api.github.com/repos/Loyalsoldier/v2ray-rules-dat/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
-wget -4 "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geoip.dat" > ./getfile/geoip.dat
-wget -4 "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geosite.dat" > ./getfile/geosite.dat 
+getgeodata(){
+	tag=$(wget -qO- -t1 -T2 "https://api.github.com/repos/Loyalsoldier/v2ray-rules-dat/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
+	wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geoip.dat" > ./getfile/geoip.dat
+	wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geosite.dat" > ./getfile/geosite.dat 
+	}
+getgeodata
 
 CurrentDate=$(date +%Y-%m-%d)
 # ======================================
@@ -73,9 +76,9 @@ echo =================
 # ======================================
 # get cdn list for shadowsocks chn and game mode
 
-wget -4 https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf
-wget -4 https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf
-wget -4 https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf
 
 cat accelerated-domains.china.conf apple.china.conf google.china.conf | sed '/^#/d' | sed "s/server=\/\.//g" | sed "s/server=\///g" | sed -r "s/\/\S{1,30}//g" | sed -r "s/\/\S{1,30}//g" >cdn_download.txt
 cat cdn_koolshare.txt cdn_download.txt | sort -u >cdn1.txt
