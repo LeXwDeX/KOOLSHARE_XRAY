@@ -11,8 +11,8 @@ wget -4 -O- https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList
 
 getgeodata(){
 	tag=$(wget -qO- -t1 -T2 "https://api.github.com/repos/Loyalsoldier/v2ray-rules-dat/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
-	wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geoip.dat" > ./getfile/geoip.dat
-	wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geosite.dat" > ./getfile/geosite.dat 
+	wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geoip.dat" >./getfile/geoip.dat
+	wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geosite.dat" >./getfile/geosite.dat 
 	}
 getgeodata
 
