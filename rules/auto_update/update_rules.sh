@@ -10,8 +10,8 @@ wget -4 http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest >./getfile
 wget -4 https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList.txt >./getfile/WhiteList.txt
 
 tag=$(wget -qO- -t1 -T2 "https://api.github.com/repos/Loyalsoldier/v2ray-rules-dat/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
-wget -4 "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geoip.dat" >./getfile/geoip.dat
-wget -4 "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geosite.dat" >./getfile/geosite.dat 
+wget -4 "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geoip.dat" > ./getfile/geoip.dat
+wget -4 "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${tag}/geosite.dat" > ./getfile/geosite.dat 
 
 CurrentDate=$(date +%Y-%m-%d)
 # ======================================
@@ -214,3 +214,10 @@ rm apple.china.conf
 rm gfwlist1.conf gfwlist_download.conf gfwlist_download_tmp.conf chnroute1.txt
 rm cdn1.txt accelerated-domains.china.conf cdn_download.txt apple_download.txt google_download.txt
 rm WhiteList.txt WhiteList_tmp.txt apnic.txt WhiteList_new.txt Routing.txt
+
+mv apple.china.conf.1 apple.china.conf
+mv google.china.conf.1 google.china.conf
+mv ipip_country_cn.netset.1 ipip_country_cn.netset
+mv WhiteList.txt.1 WhiteList.txt
+mv delegated-apnic-latest.1 delegated-apnic-latest
+mv accelerated-domains.china.conf.1 accelerated-domains.china.conf
