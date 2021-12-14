@@ -217,12 +217,3 @@ rm apple.china.conf
 rm gfwlist1.conf gfwlist_download.conf gfwlist_download_tmp.conf chnroute1.txt
 rm cdn1.txt accelerated-domains.china.conf cdn_download.txt apple_download.txt google_download.txt
 rm WhiteList.txt WhiteList_tmp.txt apnic.txt WhiteList_new.txt Routing.txt
-
-mv apple.china.conf.1 apple.china.conf
-mv google.china.conf.1 google.china.conf
-mv ipip_country_cn.netset.1 ipip_country_cn.netset
-mv WhiteList.txt.1 WhiteList.txt
-mv delegated-apnic-latest.1 delegated-apnic-latest
-mv accelerated-domains.china.conf.1 accelerated-domains.china.conf
-mv geoip.dat.1 geoip.dat
-mv geosite.dat.1 geosite.dat
