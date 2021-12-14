@@ -76,9 +76,9 @@ echo =================
 # ======================================
 # get cdn list for shadowsocks chn and game mode
 
-wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf
-wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf
-wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf > accelerated-domains.china.conf
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf > apple.china.conf
+wget -4 -O- https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf > google.china.conf
 
 cat accelerated-domains.china.conf apple.china.conf google.china.conf | sed '/^#/d' | sed "s/server=\/\.//g" | sed "s/server=\///g" | sed -r "s/\/\S{1,30}//g" | sed -r "s/\/\S{1,30}//g" >cdn_download.txt
 cat cdn_koolshare.txt cdn_download.txt | sort -u >cdn1.txt
