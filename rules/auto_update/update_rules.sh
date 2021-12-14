@@ -221,3 +221,5 @@ mv ipip_country_cn.netset.1 ipip_country_cn.netset
 mv WhiteList.txt.1 WhiteList.txt
 mv delegated-apnic-latest.1 delegated-apnic-latest
 mv accelerated-domains.china.conf.1 accelerated-domains.china.conf
+mv geoip.dat.1 geoip.dat
+mv geosite.dat.1 geosite.dat
