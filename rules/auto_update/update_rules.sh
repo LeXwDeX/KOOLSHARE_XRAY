@@ -18,11 +18,11 @@ CurrentDate=$(date +%Y-%m-%d)
 # get gfwlist for shadowsocks ipset mode
 ./fwlist.py gfwlist_download.conf
 
-grep -Ev "([0-9]{1,3}[\.]){3}[0-9]{1,3}" gfwlist_download.conf >gfwlist_download_tmp.conf
+grep -Ev "([0-9]{1,3}[\.]){3}[0-9]{1,3}" gfwlist_download.conf > gfwlist_download_tmp.conf
 
 if [ -f "gfwlist_download.conf" ]; then
-	cat gfwlist_download_tmp.conf gfwlist_koolshare.conf | grep -Ev "([0-9]{1,3}[\.]){3}[0-9]{1,3}" | sed "s/^/server=&\/./g" | sed "s/$/\/127.0.0.1#7913/g" >gfwlist_merge.conf
-	cat gfwlist_download_tmp.conf gfwlist_koolshare.conf | sed "s/^/ipset=&\/./g" | sed "s/$/\/gfwlist/g" >>gfwlist_merge.conf
+	cat gfwlist_download_tmp.conf gfwlist_koolshare.conf | grep -Ev "([0-9]{1,3}[\.]){3}[0-9]{1,3}" | sed "s/^/server=&\/./g" | sed "s/$/\/127.0.0.1#7913/g" > gfwlist_merge.conf
+	cat gfwlist_download_tmp.conf gfwlist_koolshare.conf | sed "s/^/ipset=&\/./g" | sed "s/$/\/gfwlist/g" >> gfwlist_merge.conf
 fi
 
 sort -k 2 -t. -u gfwlist_merge.conf >gfwlist1.conf
@@ -54,7 +54,7 @@ echo =================
 # cat apnic.txt| awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > chnroute1.txt
 
 # use ipip_country_cn ip database sync by https://github.com/firehol/blocklist-ipsets from ipip.net（source: https://cdn.ipip.net/17mon/country.zip）.
-curl https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipip_country/ipip_country_cn.netset | sed '/^#/d' >chnroute1.txt
+curl https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipip_country/ipip_country_cn.netset | sed '/^#/d' > chnroute1.txt
 
 md5sum3=$(md5sum chnroute1.txt | sed 's/ /\n/g' | sed -n 1p)
 md5sum4=$(md5sum ../chnroute.txt | sed 's/ /\n/g' | sed -n 1p)
@@ -125,17 +125,17 @@ else
 fi
 echo =================
 # ======================================
-sed 's|/114.114.114.114$||' accelerated-domains.china.conf >WhiteList_tmp.txt
+sed 's|/114.114.114.114$||' accelerated-domains.china.conf > WhiteList_tmp.txt
 sed -i 's|\(\.\)|\\\1|g' WhiteList_tmp.txt
 sed -i 's|server=/|.*\\\b|' WhiteList_tmp.txt
 sed -i 's|b\(cn\)$|\.\1|' WhiteList_tmp.txt
 
-echo '[Local Hosts]' >>WhiteList.txt
-echo '## China mainland domains' >>WhiteList.txt
-echo '## Get the latest database: https://github.com/xinhugo/Free-List/blob/master/WhiteList.txt' >>WhiteList.txt
-echo '## Report an issue: https://github.com/xinhugo/Free-List/issues' >>WhiteList.txt
-echo -e "## Last update: $CurrentDate\n" >>WhiteList.txt
-cat WhiteList_tmp.txt >>WhiteList.txt
+echo '[Local Hosts]' >> WhiteList.txt
+echo '## China mainland domains' >> WhiteList.txt
+echo '## Get the latest database: https://github.com/xinhugo/Free-List/blob/master/WhiteList.txt' >> WhiteList.txt
+echo '## Report an issue: https://github.com/xinhugo/Free-List/issues' >> WhiteList.txt
+echo -e "## Last update: $CurrentDate\n" >> WhiteList.txt
+cat WhiteList_tmp.txt >> WhiteList.txt
 
 [ ! -f "../WhiteList.txt" ] && mv WhiteList_tmp.txt >>WhiteList.txt
 
