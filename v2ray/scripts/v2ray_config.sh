@@ -7,8 +7,8 @@ alias echo_date='echo 【$(date +%Y年%m月%d日\ %X)】:'
 lan_ipaddr=`uci get network.lan.ipaddr`
 LOCK_FILE=/var/lock/v2ray.lock
 LOG_FILE=/tmp/upload/v2ray_log.txt
-ISP_DNS1=`cat /tmp/resolv.conf.auto|cut -d " " -f 2|grep -v 0.0.0.0|grep -v 127.0.0.1|sed -n 2p`
-ISP_DNS2=`cat /tmp/resolv.conf.auto|cut -d " " -f 2|grep -v 0.0.0.0|grep -v 127.0.0.1|sed -n 3p`
+ISP_DNS1=`cat /tmp/resolv.conf.d/resolv.conf.auto|cut -d " " -f 2|grep -v 0.0.0.0|grep -v 127.0.0.1|sed -n 2p`
+ISP_DNS2=`cat /tmp/resolv.conf.d/resolv.conf.auto|cut -d " " -f 2|grep -v 0.0.0.0|grep -v 127.0.0.1|sed -n 3p`
 KP_ENABLE=`dbus get koolproxy_enable`
 V2RAY_CONFIG_FILE_TMP="/tmp/v2ray_tmp.json"
 V2RAY_CONFIG_FILE="/koolshare/v2ray/v2ray.json"
@@ -920,7 +920,7 @@ update_rule(){
 	version_cdn1=$(cat $KSROOT/v2ray/version | sed -n 4p | sed 's/ /\n/g'| sed -n 1p)
 	version_Routing1=$(cat $KSROOT/v2ray/version | sed -n 5p | sed 's/ /\n/g'| sed -n 1p)
 	version_WhiteList1=$(cat $KSROOT/v2ray/version | sed -n 6p | sed 's/ /\n/g'| sed -n 1p)
-	echo_date 开始更新koolss规则，请等待...
+	echo_date 开始更新规则，请等待...
 	wget --no-check-certificate --timeout=8 -qO - $url_main/version1 > /tmp/version1
 	if [ "$?" == "0" ]; then
 		echo_date 检测到在线版本文件，继续...
