@@ -11,7 +11,9 @@ else
 fi
 
 auto_update(){
-	./rules/auto_update/update_rules.sh
+	cd ./rules/auto_update/
+	./update_rules.sh
+
 }
 auto_update
 
