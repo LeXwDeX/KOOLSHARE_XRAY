@@ -10,6 +10,11 @@ else
 	echo dir exist
 fi
 
+auto_update(){
+	./rules/auto_update/update_rules.sh
+}
+auto_update
+
 backupRule(){
 wget -4 -O- https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList.txt >./${dirname}/WhiteList.txt
 wget -4 -O- https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipip_country/ipip_country_cn.netset >./${dirname}/ipip_country_cn.netset
