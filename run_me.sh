@@ -35,7 +35,7 @@ getgeoData() {
 getnewV2Ray() {
 	getnewV2Ray=$(wget -qO- -t1 -T2 "https://api.github.com/repos/v2fly/v2ray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
 	wget -4 -O- "https://github.com/v2fly/v2ray-core/releases/download/${getnewV2Ray}/v2ray-linux-64.zip" >./${dirname}/v2ray-linux-64.zip
-	unzip ./${dirname}/v2ray-linux-64.zip -d ./${dirname}/v2ray-linux-64/
+	unzip -o ./${dirname}/v2ray-linux-64.zip -d ./${dirname}/v2ray-linux-64/
 }
 
 updateV2Ray(){
