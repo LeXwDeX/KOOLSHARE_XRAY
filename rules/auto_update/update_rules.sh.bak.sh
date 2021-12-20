@@ -3,7 +3,7 @@
 CurrentDate=$(date +%Y-%m-%d)
 # ======================================
 # get gfwlist for shadowsocks ipset mode
-./rules/auto_update/fwlist.py gfwlist_download.conf
+./fwlist.py gfwlist_download.conf
 
 grep -Ev "([0-9]{1,3}[\.]){3}[0-9]{1,3}" gfwlist_download.conf > gfwlist_download_tmp.conf
 
