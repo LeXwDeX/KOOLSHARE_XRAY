@@ -2,7 +2,7 @@
 ## China mainland domains
 ## Get the latest database: https://github.com/xinhugo/Free-List/blob/master/WhiteList.txt
 ## Report an issue: https://github.com/xinhugo/Free-List/issues
-## Last update: 2022-01-03
+## Last update: 2022-01-04
 
 .*\b0-100\.com
 .*\b0-6\.com
@@ -5709,6 +5709,7 @@
 .*\b666wan\.com
 .*\b666wan\.net
 .*\b666xinxin\.com
+.*\b6673p\.com
 .*\b6677000\.com
 .*\b667744\.com
 .*\b6677493\.com
@@ -6155,6 +6156,7 @@
 .*\b777524\.com
 .*\b7775367\.com
 .*\b777684a\.com
+.*\b777lala\.com
 .*\b777moban\.com
 .*\b777n\.com
 .*\b77833\.net
@@ -7189,7 +7191,6 @@
 .*\b92ay\.com
 .*\b92bbs\.net
 .*\b92bizhi\.com
-.*\b92byg\.com
 .*\b92caijing\.com
 .*\b92cloud\.com
 .*\b92cy\.cc
@@ -7904,6 +7905,7 @@
 .*\baboatedu\.com
 .*\baboboo\.com
 .*\baboilgame\.com
+.*\baboluojihua\.com
 .*\baboutcg\.com
 .*\baboutcg\.net
 .*\baboutcg\.org
@@ -15979,7 +15981,6 @@
 .*\bckgcjl\.com
 .*\bckimg\.com
 .*\bckjr001\.com
-.*\bckkpp\.com
 .*\bckmov\.com
 .*\bckook\.com
 .*\bckplayer\.com
@@ -21529,6 +21530,7 @@
 .*\beggjs\.org
 .*\beggscute\.com
 .*\beggtt\.com
+.*\beghnmj\.xyz
 .*\begonetworks\.org
 .*\begongzheng\.com
 .*\begoonet\.com
@@ -32911,6 +32913,7 @@
 .*\bjianhui\.org
 .*\bjianhui666\.com
 .*\bjianianle\.com
+.*\bjianick\.com
 .*\bjianjian\.tv
 .*\bjianjiaobuluo\.com
 .*\bjianjie8\.com
@@ -42067,6 +42070,7 @@
 .*\bnbweekly\.com
 .*\bnbyang\.com
 .*\bnbyeda\.com
+.*\bnbz4jc2j\.com
 .*\bncacg\.org
 .*\bncartfoundation\.org
 .*\bncdxbbs\.com
@@ -51625,6 +51629,7 @@
 .*\bstrongcms\.net
 .*\bstrongled\.com
 .*\bstswjx\.com
+.*\bstubbornhuang\.com
 .*\bstuda\.net
 .*\bstudentboss\.com
 .*\bstudioartiz\.com
@@ -53676,6 +53681,7 @@
 .*\bticwear\.com
 .*\btida120\.com
 .*\btidb\.io
+.*\btideswing\.fun
 .*\btidi\.mobi
 .*\btiduyun\.com
 .*\btieba\.com
@@ -63656,6 +63662,7 @@
 .*\bynshf\.com
 .*\bynshijian\.com
 .*\bynsjg\.com
+.*\bynsjnls\.com
 .*\bynsqx\.com
 .*\bynteng\.com
 .*\byntsg\.com
@@ -66046,6 +66053,7 @@
 .*\bzhenjiahuo\.com
 .*\bzhenjiang-marathon\.com
 .*\bzhenleishan\.com
+.*\bzhenlian\.online
 .*\bzhenlinxin\.com
 .*\bzhenlishen\.com
 .*\bzhenniu24\.com
