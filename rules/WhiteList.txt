@@ -2,7 +2,7 @@
 ## China mainland domains
 ## Get the latest database: https://github.com/xinhugo/Free-List/blob/master/WhiteList.txt
 ## Report an issue: https://github.com/xinhugo/Free-List/issues
-## Last update: 2022-01-05
+## Last update: 2022-01-06
 
 .*\b0-100\.com
 .*\b0-6\.com
@@ -1107,7 +1107,6 @@
 .*\b11chuangye\.com
 .*\b11dns\.com
 .*\b11dream\.net
-.*\b11dy\.net
 .*\b11fldxn\.com
 .*\b11flow\.com
 .*\b11g\.com
@@ -3190,6 +3189,7 @@
 .*\b363u\.com
 .*\b364000\.com
 .*\b365128\.com
+.*\b365135\.com
 .*\b36543\.com
 .*\b365500\.com
 .*\b365708\.com
@@ -6780,7 +6780,6 @@
 .*\b88ng\.com
 .*\b88pets\.com
 .*\b88popo\.com
-.*\b88q\.com
 .*\b88rpg\.net
 .*\b88tang\.com
 .*\b88tph\.com
@@ -8523,7 +8522,6 @@
 .*\bailongmiao\.com
 .*\bailuntan\.com
 .*\bailvxing\.com
-.*\bailvzhidu\.com
 .*\baimagang\.com
 .*\baimaoji\.com
 .*\baimapp\.net
@@ -9284,6 +9282,7 @@
 .*\banquanzhuomian\.com
 .*\banqunzhi\.com
 .*\banrayer\.com
+.*\banren\.org
 .*\banrenmind\.com
 .*\banruichina\.com
 .*\bansgo\.com
@@ -13734,6 +13733,7 @@
 .*\bcd-vv\.com
 .*\bcd-zc\.com
 .*\bcd120\.com
+.*\bcd23f\.com
 .*\bcd37wan\.com
 .*\bcdabon\.com
 .*\bcdadata\.com
@@ -13889,6 +13889,7 @@
 .*\bcdqcp\.com
 .*\bcdqph\.com
 .*\bcdqss\.com
+.*\bcdrbs\.net
 .*\bcdren\.com
 .*\bcdren\.net
 .*\bcdronghai\.com
@@ -15306,7 +15307,6 @@
 .*\bchinatranslation\.net
 .*\bchinatravel\.net
 .*\bchinatraveldepot\.com
-.*\bchinatraveldesigner\.com
 .*\bchinatruck\.org
 .*\bchinatrucks\.com
 .*\bchinatsi\.com
@@ -22986,7 +22986,6 @@
 .*\bfencescn\.com
 .*\bfenduotie\.com
 .*\bfenfen\.com
-.*\bfenfenchaquan\.com
 .*\bfenfenriji\.com
 .*\bfenfenwz\.com
 .*\bfenfenzh\.cc
@@ -25681,7 +25680,6 @@
 .*\bgsbankmall\.com
 .*\bgscaijing\.com
 .*\bgscidc\.net
-.*\bgsdayu\.com
 .*\bgsdk\.tv
 .*\bgsdlcn\.com
 .*\bgsdpw\.com
@@ -28489,6 +28487,7 @@
 .*\bhnoceanrace\.com
 .*\bhnol\.net
 .*\bhnpet\.net
+.*\bhnpfw\.com
 .*\bhnpolice\.com
 .*\bhnpost\.com
 .*\bhnqfseed\.com
@@ -32380,7 +32379,6 @@
 .*\bjakting\.com
 .*\bjalan\.space
 .*\bjalorsoft\.com
-.*\bjals1rfsfo\.com
 .*\bjamespan\.me
 .*\bjamidol\.com
 .*\bjammyfm\.com
@@ -36006,7 +36004,6 @@
 .*\bku6\.net
 .*\bku6cdn\.com
 .*\bku6img\.com
-.*\bku6vms\.com
 .*\bku82\.com
 .*\bku86\.com
 .*\bku8ku8\.com
@@ -38096,6 +38093,7 @@
 .*\blljgame\.com
 .*\blljgxx\.com
 .*\bllku\.com
+.*\bllqdh\.com
 .*\blls\.moe
 .*\bllsapp\.com
 .*\bllscdn\.com
@@ -42132,7 +42130,6 @@
 .*\bneituixiaowangzi\.com
 .*\bnelkshuhe\.com
 .*\bnellit\.net
-.*\bnemosdo\.com
 .*\bnengapp\.com
 .*\bnenggeimall\.com
 .*\bnengshida\.com
@@ -45361,8 +45358,8 @@
 .*\bpysmei\.com
 .*\bpystarter\.com
 .*\bpytgo\.com
-.*\bpython88\.com
 .*\bpython-china\.com
+.*\bpython88\.com
 .*\bpythonav\.com
 .*\bpythonclub\.org
 .*\bpythondoc\.com
@@ -46726,6 +46723,7 @@
 .*\bqueenfather\.com
 .*\bquegame\.com
 .*\bquegoo\.com
+.*\bqueji\.tw
 .*\bqueqiaoba\.com
 .*\bquerylist\.cc
 .*\bqueshao\.com
@@ -49681,7 +49679,6 @@
 .*\bshoot\.photo
 .*\bshootmedia\.net
 .*\bshop\.globalsign\.com
-.*\bshop123\.com
 .*\bshop2255\.com
 .*\bshop2cn\.com
 .*\bshopbackdrop\.com
@@ -52131,7 +52128,6 @@
 .*\bsxprgc\.com
 .*\bsxpta\.com
 .*\bsxpyzg\.com
-.*\bsxqns\.com
 .*\bsxrb\.com
 .*\bsxrbw\.com
 .*\bsxrczx\.com
@@ -52300,7 +52296,6 @@
 .*\bsz5156\.com
 .*\bsz5983\.com
 .*\bsz61\.com
-.*\bsz68\.com
 .*\bsz7h\.com
 .*\bsz836\.com
 .*\bsz886\.com
@@ -57638,6 +57633,7 @@
 .*\bwenancehua\.com
 .*\bwenancn\.com
 .*\bwenangou\.com
+.*\bwenanzhe\.com
 .*\bwenbita\.net
 .*\bwenbo\.cc
 .*\bwencaischool\.com
@@ -59947,6 +59943,7 @@
 .*\bxhj\.com
 .*\bxhjingling\.com
 .*\bxhkt\.tv
+.*\bxhlaowu\.com
 .*\bxhlgfsc\.com
 .*\bxhlyjlb\.com
 .*\bxhma\.com
@@ -63173,7 +63170,6 @@
 .*\byinjiaji\.com
 .*\byinjietd\.com
 .*\byinka\.co
-.*\byinke\.com
 .*\byinker\.com
 .*\byinlei\.net
 .*\byinliuba\.com
@@ -63329,7 +63325,6 @@
 .*\byiwan\.com
 .*\byiwanggo\.net
 .*\byiwangml\.com
-.*\byiwanng\.com
 .*\byiwanzhushou\.com
 .*\byiwealth\.com
 .*\byiweb\.com
@@ -63457,7 +63452,6 @@
 .*\byjscloud\.com
 .*\byjsjl\.org
 .*\byjwujian\.com
-.*\byjxqy\.com
 .*\byjxsoft\.com
 .*\byjyghb\.com
 .*\byjz9\.com
@@ -64442,6 +64436,7 @@
 .*\byuego\.net
 .*\byuegowu\.com
 .*\byuehuzhi\.com
+.*\byueimg\.com
 .*\byueji\.com
 .*\byuejianzun\.xyz
 .*\byuejiayan\.com
@@ -65868,7 +65863,6 @@
 .*\bzhaoapple\.com
 .*\bzhaobeidaxiao\.com
 .*\bzhaobeijing\.com
-.*\bzhaobiao\.info
 .*\bzhaobuxiu\.com
 .*\bzhaocaibb\.com
 .*\bzhaocaihr\.com
