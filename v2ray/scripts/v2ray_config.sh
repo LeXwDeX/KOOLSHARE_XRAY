@@ -911,7 +911,7 @@ check_update_v2ray(){
 }
 #=====================
 update_rule(){
-	url_back="https://raw.githubusercontent.com/hq450/fancyss/master/rules/"
+	url_back="https://raw.githubusercontent.com/hq450//master/rules/"
 	url_main="https://raw.githubusercontent.com/HEXtoDEC/LEDE_V2Ray/main/rules/"
 	
 	# version dectet

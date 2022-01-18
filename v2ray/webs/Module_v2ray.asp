@@ -1067,7 +1067,7 @@
 		function version_show() {
 			$('#_v2ray_version').html( '<font color="#1bbf35">v2ray for openwrt - ' + (dbus["v2ray_version"]  || "") + '</font>' );
 			$.ajax({
-				url: 'https://raw.githubusercontent.com/hq450/fancyss/master/fancyss_X64/config.json.js',
+				url: 'https://raw.githubusercontent.com/HEXtoDEC/LEDE_V2Ray/master/config.json.js',
 				type: 'GET',
 				dataType: 'json',
 				success: function(res) {
@@ -1082,7 +1082,7 @@
 		<div class="heading">
 			<span id="_v2ray_version"></span>
 			<a href="#/soft-center.asp" class="btn" style="float:right;border-radius:3px;margin-right:5px;margin-top:0px;">返回</a>
-			<a href="https://raw.githubusercontent.com/hq450/fancyss/master/fancyss_X64/Changelog.txt" target="_blank" class="btn btn-primary" style="float:right;border-radius:3px;margin-right:5px;margin-top:0px;">更新日志</a>
+			<a href="https://raw.githubusercontent.com/HEXtoDEC/LEDE_V2Ray/master/Changelog.txt" target="_blank" class="btn btn-primary" style="float:right;border-radius:3px;margin-right:5px;margin-top:0px;">更新日志</a>
 			<!--<button type="button" id="updateBtn" onclick="check_update()" class="btn btn-primary" style="float:right;border-radius:3px;margin-right:5px;margin-top:0px;">检查更新 <i class="icon-upgrade"></i></button>-->
 		</div>
 		<div class="content">
@@ -1259,9 +1259,9 @@
 			<div id="ss_rule_pannel" class="section"></div>
 			<script type="text/javascript">
 				$('#ss_rule_pannel').forms([
-					{ title: 'gfwlist域名数量', rid:'gfw_number_1', text:'<a id="gfw_number" href="https://raw.githubusercontent.com/hq450/fancyss/master/rules/gfwlist.conf" target="_blank"></a>'},
-					{ title: '大陆白名单IP段数量', rid:'chn_number_1', text:'<a id="chn_number" href="https://raw.githubusercontent.com/hq450/fancyss/master/rules/chnroute.txt" target="_blank"></a>'},
-					{ title: '国内域名数量（cdn名单）', rid:'cdn_number_1', text:'<a id="cdn_number" href="https://raw.githubusercontent.com/hq450/fancyss/master/rules/cdn.txt" target="_blank"></a>'},
+					{ title: 'gfwlist域名数量', rid:'gfw_number_1', text:'<a id="gfw_number" href="https://raw.githubusercontent.com/HEXtoDEC/LEDE_V2Ray/main/rules/gfwlist.conf" target="_blank"></a>'},
+					{ title: '大陆白名单IP段数量', rid:'chn_number_1', text:'<a id="chn_number" href="https://raw.githubusercontent.com/HEXtoDEC/LEDE_V2Ray/main/rules/chnroute.txt" target="_blank"></a>'},
+					{ title: '国内域名数量（cdn名单）', rid:'cdn_number_1', text:'<a id="cdn_number" href="https://raw.githubusercontent.com/HEXtoDEC/LEDE_V2Ray/main/rules/cdn.txt" target="_blank"></a>'},
 					{ title: '规则自动更新', multi: [
 						{ name: 'v2ray_basic_rule_update',type: 'select', options:[['0', '禁用'], ['1', '开启']], value: dbus.v2ray_basic_rule_update || "1", suffix: ' &nbsp;&nbsp;' },
 						{ name: 'v2ray_basic_rule_update_day', type: 'select', options:option_day_time, value: dbus.v2ray_basic_rule_update_day || "7",suffix: ' &nbsp;&nbsp;' },
