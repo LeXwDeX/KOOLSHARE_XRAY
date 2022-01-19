@@ -5,7 +5,7 @@ dirname=backupfile
 echo "the dir name is $dirname"
 if [ ! -d $dirname ]; then
 	mkdir $dirname
-	mkdri $dirname/v2ray-linux-64
+	mkdir $dirname/v2ray-linux-64
 else
 	echo dir exist
 fi
