@@ -59,7 +59,7 @@
 This repo relies on the following third-party projects:
 
 - Special thanks:
-  - [v2fly/v2ray-core](https://github.com/v2fly/v2ray-core)
+  - [xtls/Xray-core](https://github.com/xtls/Xray-core)
 - In production:
   - [gorilla/websocket](https://github.com/gorilla/websocket)
   - [lucas-clemente/quic-go](https://github.com/lucas-clemente/quic-go)

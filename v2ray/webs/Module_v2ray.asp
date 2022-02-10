@@ -1088,7 +1088,7 @@
 		<div class="content">
 			<span class="col" style="line-height:30px;width:700px">
 			V2Ray 是一个模块化的代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。<br />
-			你需要为 V2Ray 安装专用的服务端程序:<a href="https://github.com/v2fly/v2ray-core" target="_blank"> 【点此访问源码项目】 </a><a href="https://www.v2ray.com/chapter_00/install.html" target="_blank"> 【点此访问一键服务器安装脚本】 </a>
+			你需要为 V2Ray 安装专用的服务端程序:<a href="https://github.com/xtls/xray-core" target="_blank"> 【点此访问源码项目】 </a><a href="https://www.v2ray.com/chapter_00/install.html" target="_blank"> 【点此访问一键服务器安装脚本】 </a>
 		</div>
 	</div>
 	<div class="box" style="margin-top: 0px;">
@@ -1301,7 +1301,7 @@
 					]},
 					{ title: 'V2Ray 数据操作', suffix: '<button onclick="manipulate_conf(\'v2ray_config.sh\', 2);" class="btn btn-success">清除所有 v2ray 数据</button>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="manipulate_conf(\'v2ray_config.sh\', 3);" class="btn btn-download">备份所有 v2ray 数据</button>' },
 					{ title: 'V2Ray 数据恢复', suffix: '<input type="file" id="file" size="50">&nbsp;&nbsp;<button id="upload1" type="button"  onclick="restore_conf();" class="btn btn-danger">上传并恢复 <i class="icon-cloud"></i></button>' },
-					{ title: 'V2Ray 当前版本', suffix: '<a id="v2ray_version" href="https://github.com/v2fly/v2ray-core/releases" target="_blank"></a>'},
+					{ title: 'V2Ray 当前版本', suffix: '<a id="v2ray_version" href="https://github.com/xtls/Xray-core/releases" target="_blank"></a>'},
 					{ title: 'V2Ray 版本升级', multi: [
 						{ name:'v2ray_basic_check_releases',type:'select', options:[['0', '升级到最新版（包括测试版）'], ['1', '仅升级到正式版']], value: dbus.v2ray_basic_check_releases || "1" ,suffix: '  &nbsp;&nbsp;'},
 						{ suffix: '<button onclick="manipulate_conf(\'v2ray_config.sh\', 5);" class="btn btn-download">一键升级v2ray 版本</button>' }
