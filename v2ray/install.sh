@@ -18,7 +18,7 @@ cp /tmp/v2ray/uninstall.sh $KSROOT/scripts/uninstall_v2ray.sh
 chmod +x $KSROOT/scripts/v2ray_*
 chmod +x $KSROOT/scripts/uninstall_v2ray.sh
 chmod +x $KSROOT/bin/v2ray
-chmod +x $KSROOT/bin/v2ctl
+# chmod +x $KSROOT/bin/v2ctl
 
 if [ -n "$v2ray_basic_config" ]; then
 	dbus set v2ray_server_tag_1="节点1"

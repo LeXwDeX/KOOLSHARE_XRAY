@@ -16,7 +16,7 @@ rm -rf $KSROOT/scripts/v2ray*
 rm -rf $KSROOT/init.d/S99v2ray.sh
 rm -rf $KSROOT/v2ray
 rm -rf $KSROOT/bin/v2ray
-rm -rf $KSROOT/bin/v2ctl
+# rm -rf $KSROOT/bin/v2ctl
 rm -rf $KSROOT/bin/smartdns
 rm -rf $KSROOT/webs/Module_v2ray.asp
 rm -rf $KSROOT/webs/res/icon-v2ray.png

@@ -274,52 +274,29 @@ gen_v2ray_config(){
 	fi
 	if [ "$v2ray_basic_socks" == "1" ]; then
 		echo_date 开启允许本地局域网或者远程用户连接的socks5代理服务器，端口1281
-		TEMSOCKS="{
-				  \"tag\": \"socks5\",
-				  \"protocol\": \"socks\",
-				  \"port\": 1281,
-				  \"settings\": {
-					  \"auth\": \"$(get_auth_status $v2ray_service_auth)\",
-					  \"accounts\": [
-						$TEMAUTH					  
-					  ],
-					  \"userLevel\": 0,
-					  \"ip\": \"0.0.0.0\",
-					  \"udp\": true
-					},
-				  \"sniffing\": {
-					\"enabled\": $(get_function_switch $v2ray_basic_sniffing),
-					\"destOverride\": [
-					  \"http\",
-					  \"tls\"
-					]
-				  }
-				},"
+		TEMSOCKS="
+			{
+            \"tag\": \"socks5\",
+            \"protocol\": \"socks\",
+            \"listen\": \"0.0.0.0\",
+            \"port\": 1281,
+            \"settings\": {
+                \"udp\": true
+            }
+        },		
+		"
 	else
 		TEMSOCKS=""
 	fi
 	if [ "$v2ray_basic_http" == "1" ]; then
 		echo_date 开启允许本地局域网或者远程用户连接的http代理服务器，端口1282
 		TEMHTTP="{
-				  \"tag\": \"http\",
-				  \"protocol\": \"http\",
-				  \"port\": 1282,
-				  \"settings\": {
-					  \"accounts\": [
-						$TEMAUTH
-					  ],
-					  \"timeout\": 0,
-					  \"userLevel\": 0,
-					  \"allowTransparent\": false
-				  },
-				  \"sniffing\": {
-					\"enabled\": $(get_function_switch $v2ray_basic_sniffing),
-					\"destOverride\": [
-					  \"http\",
-					  \"tls\"
-					]
-				  }
-				},"
+            \"tag\": \"http\",
+            \"protocol\": \"http\",
+            \"listen\": \"0.0.0.0\",
+            \"port\": 1282
+        },		
+		"
 	else
 		TEMHTTP=""
 	fi
@@ -367,6 +344,7 @@ gen_v2ray_config(){
 						{
 						  \"tag\": \"dns\",
 						  \"protocol\": \"dokodemo-door\",
+						  \"listen\": \"127.0.0.1\",
 						  \"port\": 7913,
 						  \"settings\": {
 							\"address\": \"$KDF\",
@@ -888,9 +866,9 @@ check_update_v2ray(){
 				mkdir -p /tmp/v2ray_update
 				unzip /tmp/v2ray_update.zip -d /tmp/v2ray_update
 				cp -rf /tmp/v2ray_update/v2ray $KSROOT/bin/v2ray
-				cp -rf /tmp/v2ray_update/v2ctl $KSROOT/bin/v2ctl
+				# cp -rf /tmp/v2ray_update/v2ctl $KSROOT/bin/v2ctl
 				chmod a+x $KSROOT/bin/v2ray
-				chmod a+x $KSROOT/bin/v2ctl				
+				# chmod a+x $KSROOT/bin/v2ctl				
 				rm -rf /tmp/v2ray_update
 				rm -rf /tmp/v2ray_update.zip
 				echo_date "最新版本已安装，准备重启插件"
