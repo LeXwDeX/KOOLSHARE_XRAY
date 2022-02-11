@@ -32,7 +32,7 @@ getnewXray() {
 	unzip -o ./${dirname}/xray-linux-64.zip -d ./${dirname}/xray-linux-64/
 }
 
-updateV2Ray() {
+updateXray() {
 	cp -f ./${dirname}/geoip.dat ./v2ray/bin/
 	cp -f ./${dirname}/geosite.dat ./v2ray/bin/
 	cp -f ./${dirname}/xray-linux-64/xray ./v2ray/bin/v2ray
@@ -40,6 +40,7 @@ updateV2Ray() {
 	cp -f ./rules/auto_update/chnroute.txt ./v2ray/v2ray/
 	cp -f ./rules/gfwlist.conf ./v2ray/v2ray/
 	cp -f ./rules/version1 ./v2ray/v2ray/version
+}
 
 zipXray() {
 	tar -zcf latest_Linux64_xray.tar.gz v2ray
