@@ -5,7 +5,7 @@ dirname=backupfile
 echo "the dir name is $dirname"
 if [ ! -d $dirname ]; then
 	mkdir $dirname
-	mkdir $dirname/v2ray-linux-64
+	mkdir $dirname/xray-linux-64
 else
 	echo dir exist
 fi
@@ -26,29 +26,28 @@ getgeoData() {
 	wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${getgeoData}/geosite.dat" >./${dirname}/geosite.dat
 }
 
-getnewV2Ray() {
-	getnewV2Ray=$(wget -qO- -t1 -T2 "https://api.github.com/repos/XTLS/Xray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
-	wget -4 -O- "https://github.com/XTLS/Xray-core/releases/download/${getnewV2Ray}/Xray-linux-64.zip" >./${dirname}/v2ray-linux-64.zip
-	unzip -o ./${dirname}/v2ray-linux-64.zip -d ./${dirname}/v2ray-linux-64/
+getnewXray() {
+	getNewXray=$(wget -qO- -t1 -T2 "https://api.github.com/repos/XTLS/Xray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
+	wget -4 -O- "https://github.com/XTLS/Xray-core/releases/download/${getNewXray}/Xray-linux-64.zip" >./${dirname}/xray-linux-64.zip
+	unzip -o ./${dirname}/xray-linux-64.zip -d ./${dirname}/xray-linux-64/
 }
 
-updateV2Ray() {
-	cp -f ./${dirname}/geoip.dat ./v2ray/bin/
-	cp -f ./${dirname}/geosite.dat ./v2ray/bin/
-	# cp -f ./${dirname}/v2ray-linux-64/v2ctl ./v2ray/bin/
-	cp -f ./${dirname}/v2ray-linux-64/xray ./v2ray/bin/v2ray
-	cp -f ./rules/auto_update/cdn.txt ./v2ray/v2ray/
-	cp -f ./rules/auto_update/chnroute.txt ./v2ray/v2ray/
-	cp -f ./rules/gfwlist.conf ./v2ray/v2ray/
-	cp -f ./rules/version1 ./v2ray/v2ray/version
+updateXray() {
+	cp -f ./${dirname}/geoip.dat ./xray/bin/
+	cp -f ./${dirname}/geosite.dat ./xray/bin/
+	cp -f ./${dirname}/xray-linux-64/xray ./xray/bin/xray
+	cp -f ./rules/auto_update/cdn.txt ./xray/xray/
+	cp -f ./rules/auto_update/chnroute.txt ./xray/xray/
+	cp -f ./rules/gfwlist.conf ./xray/xray/
+	cp -f ./rules/version1 ./xray/xray/version
 }
 
-zipV2Ray() {
-	tar -zcf latest_Linux64_V2Ray.tar.gz v2ray
+zipXray() {
+	tar -zcf latest_Linux64_xray.tar.gz xray
 }
 
 backupRule
 getgeoData
-getnewV2Ray
-updateV2Ray
-zipV2Ray
+getnewXray
+updateXray
+zipXray
