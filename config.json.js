@@ -1,9 +1,9 @@
 {
-"version":"2.3.0",
+"version":"0.0.1",
 "md5":"898cbc05fd75908d4a99d7320bcca000",
 "home_url":"Module_koolss.asp",
-"title":"科学上网插件",
-"description":"轻松科学上网~",
-"changelog":"支持4.0.0",
-"build_date":"2022-01-18_14:11:12"
+"title":"xray插件",
+"description":"xray插件",
+"changelog":"1.0.0",
+"build_date":"2022-02-15"
 }
