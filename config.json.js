@@ -1,5 +1,5 @@
 {
-"version":"0.0.1",
+"version":"1.0.0",
 "md5":"898cbc05fd75908d4a99d7320bcca000",
 "home_url":"Module_koolss.asp",
 "title":"xray插件",
