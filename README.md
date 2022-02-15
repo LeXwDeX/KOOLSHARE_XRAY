@@ -8,5 +8,10 @@
 * ./rules/auto_update/update_rules.sh
 * ./run_me.sh 
 
+## 分支说明
+* main = xray版本
+* vray = 老版本
+* xray = WIP的xray版本，请不要用
+
 ## 使用方式
 NEED TODO
