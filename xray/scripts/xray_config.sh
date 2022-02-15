@@ -856,14 +856,14 @@ detect_ss(){
 
 get_latest_release() {
 	wget -qO- -t1 -T2 "https://api.github.com/repos/$1/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'
-	wget -qO- -t1 -T2 "https://api.github.com/repos/v2fly/xray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'
+	wget -qO- -t1 -T2 "https://api.github.com/repos/xtls/xray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'
 }
 
 check_update_xray(){
 	local lastver oldver
 	echo_date 开始检查 xray 最新版本。。。
 	if [ "$xray_basic_check_releases" == "0" ]; then
-		lastver=$(wget -qO- -t1 -T2 "https://api.github.com/repos/v2fly/xray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
+		lastver=$(wget -qO- -t1 -T2 "https://api.github.com/repos/xtls/xray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
 	else
 		lastver=$(get_latest_release "xtls/Xray-core")
 	fi
@@ -879,8 +879,8 @@ check_update_xray(){
 			echo XU6J03M6
 		else
 			echo_date "准备升级到最新版本，开始下载"
-			wget --no-check-certificate --timeout=8 -a $LOG_FILE --tries=2 -O - "https://github.com/v2fly/xray-core/releases/download/${lastver}/xray-linux-64.zip" > /tmp/xray_update.zip
-			#curl -r 0-100 -L - "https://github.com/v2fly/xray-core/releases/download/${lastver}/xray-linux-64.zip" -o /tmp/xray_update.zip
+			wget --no-check-certificate --timeout=8 -a $LOG_FILE --tries=2 -O - "https://github.com/xtls/xray-core/releases/download/${lastver}/xray-linux-64.zip" > /tmp/xray_update.zip
+			#curl -r 0-100 -L - "https://github.com/xtls/xray-core/releases/download/${lastver}/xray-linux-64.zip" -o /tmp/xray_update.zip
 			if [ "$?" -eq 0 ] ; then
 				echo_date "最新版本已下载，准备安装"
 				kill_process
