@@ -17,7 +17,7 @@ get_china_status(){
 }
 
 get_foreign_status(){
-	wget -4 --spider --quiet --tries=2 --timeout=2 www.google.com
+	wget -4 --spider --quiet --tries=2 --timeout=2 www.google.com.hk
 	if [ "$?" == "0" ]; then
 		log1='国外链接 【'$LOGTIME'】 ✓'
 	else

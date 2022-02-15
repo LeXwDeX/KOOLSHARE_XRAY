@@ -1062,7 +1062,7 @@ rand(){
 }
 xray_watchdog_status(){
 	local rnd newname
-	/usr/bin/wget -4 --spider --quiet --tries=2 --timeout=3 www.google.com.tw
+	/usr/bin/wget -4 --spider --quiet --tries=2 --timeout=3 www.google.com.hk
 	[ "$?" == "0" ] || {
 		/usr/bin/wget -4 --spider --quiet --tries=2 --timeout=3 www.baidu.com
 		[ "$?" == "0" ] && {
