@@ -44,7 +44,7 @@ updateV2Ray() {
 }
 
 zipV2Ray() {
-	tar -zcf v2ray.tar.gz v2ray
+	tar -zcf latest_v2ray.tar.gz v2ray
 }
 
 backupRule
