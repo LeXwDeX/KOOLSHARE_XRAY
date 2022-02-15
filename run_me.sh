@@ -6,7 +6,7 @@ dirname=backupfile
 echo "the dir name is $dirname"
 if [ ! -d $dirname ]; then
 	mkdir $dirname
-	mkdir $dirname/v2ray-linux-64
+	mkdir $dirname/xray-linux-64
 else
 	echo dir exist
 fi
@@ -29,10 +29,10 @@ getgeoData() {
 	wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${getgeoData}/geosite.dat" >./${dirname}/geosite.dat
 }
 
-# 获取最新的xray，v2raybin文件
+# 获取最新的xray bin文件
 getnewBin() {
-	getnewV2Ray=$(wget -qO- -t1 -T2 "https://api.github.com/repos/xtls/Xray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
-	wget -4 -O- "https://github.com/xtls/Xray-core/releases/download/${getnewV2Ray}/xray-linux-64.zip" >./${dirname}/xray-linux-64.zip
+	getnewxray=$(wget -qO- -t1 -T2 "https://api.github.com/repos/xtls/Xray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
+	wget -4 -O- "https://github.com/xtls/Xray-core/releases/download/${getnewxray}/xray-linux-64.zip" >./${dirname}/xray-linux-64.zip
 	unzip -o ./${dirname}/xray-linux-64.zip -d ./${dirname}/xray-linux-64/
 }
 
