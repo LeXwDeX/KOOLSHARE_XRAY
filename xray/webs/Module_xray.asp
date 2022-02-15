@@ -1088,7 +1088,7 @@
 		<div class="content">
 			<span class="col" style="line-height:30px;width:700px">
 			xray 是一个模块化的代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。<br />
-			你需要为 xray 安装专用的服务端程序:<a href="https://github.com/xtls/xray-core" target="_blank"> 【点此访问源码项目】 </a><a href="https://www.xray.com/chapter_00/install.html" target="_blank"> 【点此访问一键服务器安装脚本】 </a>
+			你需要为 xray 安装专用的服务端程序:<a href="https://github.com/xtls/xray-core" target="_blank"> 【点此访问源码项目】 </a><a href="https://github.com/HEXtoDEC/Xray_onekey" target="_blank"> 【点此访问一键服务器安装脚本】 </a>
 		</div>
 	</div>
 	<div class="box" style="margin-top: 0px;">
