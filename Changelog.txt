@@ -1,2 +1,4 @@
-Koolshare LEDE-X64 shadowsocks Changelog
+koolshare LEDE-X64 xray changelog
 ==========================================
+1.0.0
+   - 第一代版本，完全替换v2ray变量到xray
