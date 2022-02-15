@@ -37,13 +37,13 @@ getnewBin() {
 
 # 拷贝文件到对应的软件包目录
 updateData() {
-	cp -f ./${dirname}/geoip.dat ./xray/bin/
-	cp -f ./${dirname}/geosite.dat ./xray/bin/
-	cp -f ./${dirname}/xray-linux-64/xray ./xray/bin/
-	cp -f ./rules/auto_update/cdn.txt ./xray/xray/
-	cp -f ./rules/auto_update/chnroute.txt ./xray/xray/
-	cp -f ./rules/gfwlist.conf ./xray/xray/
-	cp -f ./rules/version1 ./xray/xray/version
+	cp -f ./${dirname}/geoip.dat			./xray/bin/
+	cp -f ./${dirname}/geosite.dat 			./xray/bin/
+	cp -f ./${dirname}/xray-linux-64/xray 	./xray/bin/
+	cp -f ./rules/auto_update/cdn.txt 		./xray/xray/
+	cp -f ./rules/auto_update/chnroute.txt 	./xray/xray/
+	cp -f ./rules/gfwlist.conf 				./xray/xray/
+	cp -f ./rules/version1 					./xray/xray/version
 }
 
 # 制作压缩包
