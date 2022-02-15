@@ -1,9 +1,9 @@
 {
-"version":"0.0.1",
+"version":"1.0.0",
 "md5":"898cbc05fd75908d4a99d7320bcca000",
 "home_url":"Module_koolss.asp",
 "title":"xray插件",
 "description":"xray插件",
-"changelog":"0.0.1",
-"build_date":"2022-02-11_09:44:01"
+"changelog":"1.0.0",
+"build_date":"2022-02-15"
 }

@@ -1,6 +1,6 @@
 #!/bin/bash
-# cratdir
 
+# 创建文件夹如果不存在的话
 dirname=backupfile
 echo "the dir name is $dirname"
 if [ ! -d $dirname ]; then
@@ -10,6 +10,7 @@ else
 	echo dir exist
 fi
 
+# 备份白名单,CDN名单等内容
 backupRule() {
 	wget -4 -O- https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList.txt >./${dirname}/WhiteList.txt
 	wget -4 -O- https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipip_country/ipip_country_cn.netset >./${dirname}/ipip_country_cn.netset
@@ -20,34 +21,38 @@ backupRule() {
 	wget -4 -O- https://raw.githubusercontent.com/xinhugo/Free-List/master/WhiteList.txt >./${dirname}/WhiteList.txt
 }
 
+# 获取最新的GeoData
 getgeoData() {
 	getgeoData=$(wget -qO- -t1 -T2 "https://api.github.com/repos/Loyalsoldier/v2ray-rules-dat/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
 	wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${getgeoData}/geoip.dat" >./${dirname}/geoip.dat
 	wget -4 -O- "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${getgeoData}/geosite.dat" >./${dirname}/geosite.dat
 }
 
-getnewXray() {
-	getNewXray=$(wget -qO- -t1 -T2 "https://api.github.com/repos/XTLS/Xray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
-	wget -4 -O- "https://github.com/XTLS/Xray-core/releases/download/${getNewXray}/Xray-linux-64.zip" >./${dirname}/xray-linux-64.zip
+# 获取最新的xray bin文件
+getnewBin() {
+	getnewxray=$(wget -qO- -t1 -T2 "https://api.github.com/repos/xtls/Xray-core/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
+	wget -4 -O- "https://github.com/xtls/Xray-core/releases/download/${getnewxray}/xray-linux-64.zip" >./${dirname}/xray-linux-64.zip
 	unzip -o ./${dirname}/xray-linux-64.zip -d ./${dirname}/xray-linux-64/
 }
 
-updateXray() {
-	cp -f ./${dirname}/geoip.dat ./v2ray/bin/
-	cp -f ./${dirname}/geosite.dat ./v2ray/bin/
-	cp -f ./${dirname}/xray-linux-64/xray ./v2ray/bin/v2ray
-	cp -f ./rules/auto_update/cdn.txt ./v2ray/v2ray/
-	cp -f ./rules/auto_update/chnroute.txt ./v2ray/v2ray/
-	cp -f ./rules/gfwlist.conf ./v2ray/v2ray/
-	cp -f ./rules/version1 ./v2ray/v2ray/version
+# 拷贝文件到对应的软件包目录
+updateData() {
+	cp -f ./${dirname}/geoip.dat ./xray/bin/
+	cp -f ./${dirname}/geosite.dat ./xray/bin/
+	cp -f ./${dirname}/xray-linux-64/xray ./xray/bin/
+	cp -f ./rules/auto_update/cdn.txt ./xray/xray/
+	cp -f ./rules/auto_update/chnroute.txt ./xray/xray/
+	cp -f ./rules/gfwlist.conf ./xray/xray/
+	cp -f ./rules/version1 ./xray/xray/version
 }
 
-zipXray() {
-	tar -zcf latest_Linux64_xray.tar.gz v2ray
+# 制作压缩包
+packageData() {
+	tar -zcf latest_xray.tar.gz xray
 }
 
 backupRule
 getgeoData
-getnewXray
-updateXray
-zipXray
+getnewBin
+updateData
+packageData

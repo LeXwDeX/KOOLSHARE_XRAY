@@ -1,4 +1,4 @@
-Koolshare LEDE-X64 XRay Changelog
+koolshare LEDE-X64 xray changelog
 ==========================================
-0.0.1
-   - 初期版本移植自LEDE_V2Ray
+1.0.0
+   - 第一代版本，完全替换v2ray变量到xray
