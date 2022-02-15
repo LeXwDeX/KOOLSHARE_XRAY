@@ -1,5 +1,4 @@
 #!/bin/bash
-# cratdir
 
 # 创建文件夹如果不存在的话
 dirname=backupfile
