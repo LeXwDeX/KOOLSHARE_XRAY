@@ -909,8 +909,8 @@ check_update_xray(){
 }
 #=====================
 update_rule(){
+	url_main="https://raw.githubusercontent.com/HEXtoDEC/LEDE_XRAY/main/rules/"
 	url_back="https://raw.githubusercontent.com/hq450//master/rules/"
-	url_main="https://raw.githubusercontent.com/HEXtoDEC/LEDE_xRay/main/rules/"
 	
 	# version dectet
 	version_gfwlist1=$(cat $KSROOT/xray/version | sed -n 1p | sed 's/ /\n/g'| sed -n 1p)

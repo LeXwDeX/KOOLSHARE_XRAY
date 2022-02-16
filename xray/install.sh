@@ -35,7 +35,7 @@ fi
 dbus set softcenter_module_xray_description=模块化的代理软件包
 dbus set softcenter_module_xray_install=4
 dbus set softcenter_module_xray_name=xray
-dbus set softcenter_module_xray_title="xRay"
+dbus set softcenter_module_xray_title="xray"
 dbus set softcenter_module_xray_version=1.5.3
 dbus set xray_version=1.5.3
 
