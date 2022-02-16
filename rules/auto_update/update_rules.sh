@@ -37,8 +37,8 @@ echo =================
 # get chnroute for shadowsocks chn and game mode
 
 # Deprecated in 2019-8-1
-# wget -4 -O- http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest > apnic.txt
-# cat apnic.txt| awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > chnroute1.txt
+wget -4 -O- http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest > apnic.txt
+cat apnic.txt| awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > chnroute1.txt
 
 # use ipip_country_cn ip database sync by https://github.com/firehol/blocklist-ipsets from ipip.net（source: https://cdn.ipip.net/17mon/country.zip）.
 curl https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipip_country/ipip_country_cn.netset | sed '/^#/d' > chnroute1.txt
@@ -146,11 +146,11 @@ echo -e "\n" >>WhiteList_new.txt
 sed -e "s|114.114.114.114$||" -e "s|^s|S|" accelerated-domains.china.conf >>WhiteList_new.txt
 
 # Download domain data of Google in Mainland China part.
-#curl -O https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf
+curl -O https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf
 sed -e "s|114.114.114.114$||" -e "s|^s|S|" google.china.conf >>WhiteList_new.txt
 
 # Download domain data of Apple in Mainland China part.
-#curl -O https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf
+curl -O https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf
 sed -e "s|114.114.114.114$||" -e "s|^s|S|" apple.china.conf >>WhiteList_new.txt
 
 # ok
