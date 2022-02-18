@@ -16,10 +16,10 @@
 
 ## 使用方式
 * 使用`离线安装`即可，如果遇到关键字检测不可用，可在BASH中输入解决此问题：
-`bash
-#去掉软件中心屏蔽字
+```bash
+# 去掉软件中心屏蔽字
 sed -i 's/\tdetect_package/\t# detect_package/g' /koolshare/scripts/ks_tar_install.sh
-`
+```
 
 ## TODO
 * 可解析`vless://`协议的订阅
