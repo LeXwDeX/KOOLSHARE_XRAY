@@ -1,14 +1,14 @@
 # LEDE_KoolShare_XRay
 
 ## 简介
-* 原始版本基于LEDE的V2Ray软件包修改而来，系统环境变量，运行目录，配置文件等都修改成了适合XRAY的版本，经测试可用，可支持各类复杂的配置。
+* 原始版本基于LEDE的V2Ray软件包修改而来。目前系统环境变量，运行目录，配置文件等都修改成了适合XRAY的版本，经测试可用，可支持各类复杂的配置。
 * 服务器每天晚上会进行各类规则文件的更新，并发布和打包最新的XRay客户端。
 * 新老版本系统变量和安装目录完全不一样，不冲突，可两个都安装。
 * 软件使用测试平台：`Openwrt Koolshare Router V2.37 r17471-8ed31dafdf`，其他系统暂时没有设备可测试。
 
 ## 目录
-* ./rules/auto_update/update_rules.sh
-* ./run_me.sh 
+* ./rules/auto_update/update_rules.sh 更新配置
+* ./run_me.sh 打包用
 
 ## 分支说明
 * main = xray版本
