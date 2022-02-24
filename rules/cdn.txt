@@ -8188,6 +8188,7 @@ ah5166.com
 ah8.cc
 ah9yu.com
 ahacpp.com
+ahafm.com
 ahalei.com
 ahanxun.com
 ahaohao.com
@@ -9728,7 +9729,6 @@ asgxsy.com
 ashan.org
 as-hitech.com
 ashj.com
-ashma.info
 ashvsash.com
 ashvsash.net
 asiabt.com
@@ -12191,6 +12191,7 @@ boblog.com
 bobo.com
 bobopic.com
 bobopos.com
+bobouny.com
 bobtj.com
 bocaidaka.com
 boce.com
@@ -14271,6 +14272,7 @@ chaoji.com
 chaojideng.com
 chaojifan.com
 chaojifangyu.com
+chaojihetong.com
 chaojilian.net
 chaojilock.com
 chaojishipin.com
@@ -14355,6 +14357,7 @@ chcedo.com
 chcnav.com
 chcoin.com
 ch.com
+chcpd.com
 chczz.com
 chdajob.com
 chda.net
@@ -17866,7 +17869,6 @@ cxwwhyc.com
 cxxjs.com
 cxy61.com
 cxy7.com
-cxybl.com
 cxyd.net
 cxyfjy.com
 cxylfc.com
@@ -19943,7 +19945,6 @@ dongfangfuli.com
 dongfangnews.com
 dongfangtech.net
 dongfang-wh.com
-dongfeng-honda.com
 dongfeng-honda-elysion.com
 dongfeng-honda-gienia.com
 dongfeng-honda-greiz.com
@@ -19959,7 +19960,6 @@ dongganboy.com
 dongge.com
 donghaifunds.com
 donghao.org
-donghengjt.com
 donghongqiao.com
 donghuaxsp.com
 donghulvdao.com
@@ -22609,7 +22609,6 @@ fastonetech.com
 fastreportcn.com
 fastsoc.com
 fastsoso.cc
-fastwebcdn.com
 fat999.com
 fatedier.com
 fatiao.pro
@@ -27579,7 +27578,6 @@ helishi.net
 helishun.com
 heliuyan.com
 heliweb.net
-helixcommunity.org
 hello1010.com
 hellobanma.com
 hellobi.com
@@ -28577,7 +28575,6 @@ hoop-archi.com
 hoopchina.com
 hoopugames.net
 hoosho.com
-hooshong.com
 hooyagames.com
 hooyoo.com
 hopebank.com
@@ -29751,7 +29748,6 @@ hxbsth.com
 hxbxw.com
 hxcdn.net
 hxchem.net
-hxcpp83.com
 hxct.com
 hxdi.com
 hxdkfp.com
@@ -34502,7 +34498,6 @@ jx3tong.com
 jx3yymj.com
 jxage.com
 jxal.net
-jxalt.com
 jx-bank.com
 jxbin.com
 jxc4.com
@@ -37946,7 +37941,6 @@ llsops.com
 llsserver.com
 llssite.com
 llsstaging.com
-llss.us
 lltaohuaxiang.com
 lltllt.com
 lltoken.com
@@ -38095,7 +38089,6 @@ loldytt.tv
 lolgo.net
 lolhd.com
 loli.cd
-lolico.moe
 loli.ee
 loliloli.moe
 loliloli.net
@@ -46733,6 +46726,7 @@ qy266.com
 qy6.com
 qy6.net
 qyaaaa.com
+qybeiyong.com
 qybook.net
 qyc2008.com
 qycn.com
@@ -48989,6 +48983,7 @@ shbicycle.com
 shbj.com
 shbnrj.com
 shbobo.com
+shbund18h.com
 shbyer.com
 shcaoan.com
 shcas.net
@@ -53069,6 +53064,7 @@ teown.com
 tepcb.com
 tepintehui.com
 terabuy.com
+terapines.com
 terence2008.info
 terencexie.com
 teridge.com
@@ -54322,6 +54318,7 @@ tsoo.me
 tsov.net
 tsp189.com
 tspsy.com
+tspweb.com
 tsqt.net
 tsqw.com
 tsrcw.com
@@ -62802,7 +62799,6 @@ yiminjiayuan.com
 yiminw.com
 yimisoft.com
 yimitongxue.com
-yimity.com
 yimiyisu.com
 yimizhibo.tv
 yimoe.cc
@@ -67250,7 +67246,6 @@ ztdad.com
 ztedevice.com
 ztedevices.com
 ztedu8.com
-ztehn.com
 ztemap.com
 ztems.com
 zte.net
