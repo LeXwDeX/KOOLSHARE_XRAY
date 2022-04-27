@@ -1,6 +1,6 @@
 # LEDE_KoolShare_XRay
 
-## Koolshare版本不在维护，转战原生OpenWRT。原生更好使！
+## Koolshare版本不在维护，转战LEDE！
 
 ## 简介
 * 原始版本基于LEDE的V2Ray软件包修改而来。目前系统环境变量，运行目录，配置文件等都修改成了适合XRAY的版本，经测试可用，可支持各类复杂的配置。
